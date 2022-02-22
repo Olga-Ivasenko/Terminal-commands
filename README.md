@@ -382,33 +382,39 @@ Execute: ./myscript.txt
 ## Attention: ***`same`*** meant this command is the same for Windows
 
 **1. Посмотреть где я**
+
 ***same***
 ```bash
 pwd
 ```
 **2. Создать папку**
+
 ***same***
 ```bash
 cd MainDirectory
 mkdir Dir1
 ```
 **3. Зайти в папку**
+
 ***same***
 ```bash
 cd Dir1
 ```
 **4. Создать 3 папки**
+
 ***same***
 ```bash
 cd ..	//go back to MainDirectory
 mkdir Dir2 Dir3 Dir4
 ```
 **5. Зайти в любоую папку**
+
 ***same***
 ```bash
 cd Dir2
 ```
 **6. Создать 5 файлов (3 txt, 2 json)**
+
 ***same***
 - to create several files at once:
 ```bash
@@ -425,6 +431,7 @@ OR
 touch filename.txt
 ```
 **7. Создать 3 папки**
+
 ***same***
 - to create folders with different names:
 ```bash
@@ -489,12 +496,14 @@ vim filename.txt
 - vim: ```Esc + : + wq + Enter```
 
 **12. Выйти из папки на уровень выше**
+
 ***same***
 ```bash
 cd ..
 ```
 ************
 **13. переместить любые 2 файла, которые вы создали, в любую другую папку**
+
 ***same***
 ```bash
 > we are in MainDirectory:
@@ -503,6 +512,7 @@ mv filename1.txt filename2.txt ../Dir3
 ```
 
 **14. скопировать любые 2 файла, которые вы создали, в любую другую папку**
+
 ***same***
 - copy to the directory in same folder:
 ```bash
@@ -513,15 +523,16 @@ cp filename3.txt filename4.json folder1
 cp filename3.txt filename4.json ../
 ```
 - copy from one folder to another within same directory:
-- ```
+```bash
 cp Dir2/filename3.txt filename4.json Dir3
 ```
 - copy whole folder with my files to another folder:
-- ```
+```bash
 cp -r Dir3 Dir4
 ```
 
 **15. Найти файл по имени**
+
 ***same***
 - if we know the file name:
 ```bash
@@ -535,7 +546,7 @@ find -name "*.txt"
 ```bash
 find  -name "f2.*"
 ```
-**and all other variants can be replaced with * **
+***and all other variants can be replaced with***
 
 - search for files only:
 ```bash
@@ -547,7 +558,7 @@ find  -not  -name "*.txt" -type f
 ```
 - finding exactly  file and name:
 ```bash
-find -name "*.txt" -type f 
+find -name "*.txt" -type f
 ```
 
 **16. просмотреть содержимое в реальном времени (команда grep) изучите как она работает**
@@ -567,6 +578,7 @@ Information text Is appearing in Terminal only after saving data in file and Ctr
 Ctrl+C or Ctrl+Z
 ```
 - change request real time monitoring:
+
 ***same***
 ```
 Tailf filename.txt
@@ -576,6 +588,7 @@ For some application versions can be used:
 tail –F filename.txt
 ```
 - Just to see file content up-to-time:
+
 ***same***
 ```bash
 cat filename
@@ -588,21 +601,22 @@ cat filename.txt
 ```bash
 cat filename.txt filename.json
 ```
-- grep
+- **grep**
+
 ***same***
-	- string with needed content:
+a) string with needed content:
 ```bash
 grep "will" filename.txt
 ```
-	- string with needed content & row number:
+b) string with needed content & row number:
 ```bash
 grep  -n "will" filename.txt
 ```
-	- string with needed content & case-insensitive (L = l, Q = q):
+c) string with needed content & case-insensitive (L = l, Q = q):
 ```bash
 grep -i "WILL" filename.txt
 ```
-	- string with needed content & row number &  case-insensitive (L = l, Q = q):
+d) string with needed content & row number &  case-insensitive (L = l, Q = q):
 ```bash
 grep –n -i "WILL" filename.txt
 ```
@@ -610,7 +624,7 @@ grep –n -i "WILL" filename.txt
 
 - tail & grep combinations:
 ***same***
-	- looking for patterned words only with no caps sensitivity: 
+a) looking for patterned words only with no caps sensitivity: 
 ```bash
 tail -f filename.txt | grep -i "who"
 ```
@@ -618,7 +632,7 @@ tail -f filename.txt | grep -i "who"
 who is looking for me?
 hello who is here
 
-	- Looking for several words with no caps sensitivity
+b) Looking for several words with no caps sensitivity
 ```bash
 tail -f filename.txt | grep -i -e "who" -e "hello"
 ```
@@ -628,7 +642,7 @@ who is looking for me?
 hello who is here
 who really is here
 
-	- Looking for several words with no caps sensitivity and with only last 4 rows actuality:
+c) Looking for several words with no caps sensitivity and with only last 4 rows actuality:
 ```bash
 tail -f -n 4 filename.txt | grep -i -e "who" -e "hello"
 ```
@@ -638,6 +652,7 @@ who really is here
 
 
 **17. вывести несколько первых строк из текстового файла**
+
 ***same***
 - to see first 2 rows:
 ```bash
@@ -653,6 +668,7 @@ head -3 filename.txt
 ```
 
 **18. вывести несколько последних строк из текстового файла**
+
 ***same***
 - to see qty of rows by default (10):
 ```bash
@@ -668,6 +684,7 @@ ag –i “next” filename.txt
 ```
 
 **19. просмотреть содержимое длинного файла (команда less) изучите как она работает**
+
 ***same***
 - to delete multiple spaces:
 ```bash
@@ -689,7 +706,9 @@ less -w filename.txt
 
 
 **20. вывести дату и время**
+
 ***same***
+
 ***Depending on format of data we need, commands to be adopted:***
 - for MM/DD/YY HH:MM:SS
 ```bash
