@@ -376,7 +376,7 @@ Creat file: touch
 Save file named: myscript
 Make file executable: chmod +x ./myscript.txt
 Execute: ./myscript.txt
-
+```
 
 ## Part 2: Linux WM Ubunta Terminal
 ## Attention: ***`same`*** meant this command is the same for Windows
